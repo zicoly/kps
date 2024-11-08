@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>KPS - Impacting Knowledge, Securing Future</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <!-- BOOTSTRAP CSS -->
+  <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    /> -->
+
+  <!-- SWIPER CSS -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+  <!-- ANIMATE CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- GSAP ANIMATIONS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- scroll reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <!-- <script src="js/jquery.min.js"></script> -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/card.css" />
+  <link rel="stylesheet" href="css/bs.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="images/school-logo.jpg" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- Popup Cover  -->
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close-button" id="close-button">&times;</span>
+      <img src="./images/admission.png" alt="" />
+    </div>
+  </div>
+  <!------------- NAVBAR -------------->
+
+  <section class="header" id="header">
+    <!-- <div class="overlay"></div> -->
+    <div class="slideContainer">
+      <div class="slides" id="slides">
+
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <input type="radio" name="radio-btn" id="radio5">
+
+        <div class="slide first" id="slide">
+          <img src="../images/school.JPG" alt="School">
+        </div>
+        <div class="slide" id="slide">
+          <img src="../images/campus1.JPG" alt="Campus 1">
+        </div>
+        <div class="slide" id="slide">
+          <img src="../images/cover1.JPG" alt="Cover 1">
+        </div>
+        <div class="slide" id="slide">
+          <img src="../images/playground.JPG" alt="Playground">
+        </div>
+        <div class="slide" id="slide">
+          <img src="../images/glance1.jpg" alt="Glance 1">
+        </div>
+
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+          <div class="auto-btn5"></div>
+        </div>
+
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+          <label for="radio5" class="manual-btn"></label>
+        </div>
+      </div>
+    </div>
+
+    <section class="navigation" id="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="index.html">
+            <!-- Logo -->
+            <img src="images/school-logo.png" alt="" />
+          </a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!">
+              <span>
+                
+              </span>
+            </a>
+          </div>
+          <ul class="nav-list">
+            <!-- <li>
+                <a href="#!">HOME</a>
+              </li> -->
+            <li>
+              <a class="about1" href="#!">ABOUT US</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="about.html">About KPS</a>
+                </li>
+                <li>
+                  <a href="director.html">Director's Message</a>
+                </li>
+                <li>
+                  <a href="aims.html">Aims & Objectives</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="academic1" href="#!">ACADEMICS</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="curriculum.html">Curriculum</a>
+                </li>
+                <li>
+                  <a href="junior.html">J.S.S Subjects</a>
+                </li>
+                <li>
+                  <a href="secondary.html">S.S.S Subjects</a>
+                </li>
+                <!-- <li>
+                    <a href="#!">Co-curricular ACtivities</a>
+                  </li>
+                  <li>
+                    <a href="#!">School Calendar</a>
+                  </li> -->
+                <li>
+                  <a href="gallery.html">Events & Gallery</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="admission.html">ADMISSION</a>
+              <!-- <ul class="nav-dropdown">
+                  <li>
+                    <a href="#!">Tuition & Scholarships</a>
+                  </li>
+                  <li>
+                    <a href="#!">Admission Process</a>
+                  </li>
+                </ul> -->
+            </li>
+
+            <li>
+              <a href="staff.html">OUR STAFFS</a>
+            </li>
+            <li>
+              <a href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <div class="text-box">
+      <h1 class="animate__animated animate__fadeInDown">
+        Kasmoz Private School
+      </h1>
+      <p id="typewriter-text" class="hidden">
+        Welcome to KPS, a leading private secondary school in Nigeria with a
+        commitment to excellence.
+        We provide a well-rounded education, nurturing students to reach their
+        full potential.
+      </p>
+      <span class="motto animate__animated animate__pulse">"KNOWLEDGE IS POWER"</span>
+      <a href="" class="hero-btn">View Our Brochure</a>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+
+  <section class="about">
+    <h1 class="welcome-rodio" name="rodio-btn" id="rodio1">Welcome To KPS</h1>
+    <div class="about-container">
+      <div class="p-details">
+        <img src="images/proprietor.jpg" alt="proprietor-pic" />
+
+        <small>Prof. K.A Adeyemo</small>
+
+        <small class="proprietor">Proprietor</small>
+      </div>
+      <div class="about-rodio" name="rodio-btn" id="rodio1">
+        <p>
+          <small>
+            <strong> Kasmoz Private School (KPS)</strong>, is a prestigious
+            Nigerian private secondary school dedicated to providing an
+            exceptional educational experience for its students. Established
+            in 2010, KPS has been at the forefront of academic excellence and
+            character development, nurturing young minds to reach their full
+            potential.</small>
+        </p>
+
+        <p>
+          <small>
+            Located in the vibrant city of Ibadan, KPS boasts a sprawling
+            campus equipped with state-of-the-art facilities and a stimulating
+            learning environment. Our school prides itself on its commitment
+            to holistic education, encompassing academics, sports, arts, and
+            character-building activities.</small>
+        </p>
+        <p>
+          <small>
+            Academics at KPS are centered around a rigorous curriculum that
+            follows the Nigerian national standards, augmented with global
+            perspectives to prepare our students for a competitive world. Our
+            dedicated team of highly qualified teachers utilizes innovative
+            teaching methods, technology integration, and personalized
+            instruction to cater to the diverse learning styles of our
+            students.
+            <!-- With small class sizes, students receive individual
+              attention, fostering a supportive and collaborative learning
+              atmosphere. -->
+          </small>
+          <a href="about.html" class="readMore">Read More</a>
+        </p>
+      </div>
+      <div class="board-container">
+        <h3>Admission Form</h3>
+        <p>
+          Admission into Basic 1 - 9 & S.S.S.1 - S.S.S.3 is ongoing for
+          2023/2024 Session
+        </p>
+        <div class="download">
+          <a href="images/cv.pdf" download>Download PDF <i class="fa-solid fa-file-pdf"></i></a>
+        </div>
+        <!-- <h3>Notice Board</h3> -->
+      </div>
+    </div>
+  </section>
+
+  <!------------- FACILITIES -------------->
+
+  <section class="facilities">
+    <h1>
+      We Ensure a <span>Conducive and Supportive</span> Learning Atmosphere
+    </h1>
+    <p>
+      We foster an environment conducive to learning, while also prioritizing
+      the nurturing of a positive classroom climate and culture
+    </p>
+    <div class="row-container">
+      <div class="facilities-col">
+        <img src="images/library.JPG" alt="library-pic" />
+        <h3>School Library</h3>
+        <p>
+          We offer a well-equipped library to enhance our students' reading
+          abilities.
+        </p>
+      </div>
+      <div class="facilities-col">
+        <img src="images/playground.JPG" alt="playground-pic" />
+        <h3>School Play Ground</h3>
+        <p>
+          Our students enjoy a spacious playground for recreational
+          activities.
+        </p>
+      </div>
+      <div class="facilities-col">
+        <img src="images/computer lab.JPG" alt="computer lab-pic" />
+        <h3>Computer Laboratory</h3>
+        <p>
+          Our school features a state-of-the-art computer lab, equipped with
+          the latest technology for enhanced learning.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!------------- SCHOOL ANTHEM -------------->
+
+  <section class="cta">
+    <h1>School Anthem</h1>
+    <p>
+      Great Kasmoz, Great Kasmoz,<br />
+      Oyo state's most beautiful school<br />
+      We are the leaders of tomorrow,<br />
+      <span> Knowledge is power</span>, our motto.<br />
+      Forward ever, backward never,<br />
+      <span>Impacting knowledge, securing future,</span><br />
+      Great Kasmoz, Great!!<br />
+      I love you, aiming high, shooting high.<br />
+      There is no other Kasmoz in the universe,<br />
+      Another Kasmoz is a counterfeit.<br />
+      Great! Great! Great! Great! Great!<br />
+      Kasmoz! Kasmoz! Kasmoz!!
+    </p>
+  </section>
+
+  <!------------- GLANCE -------------->
+
+  <section class="glance">
+    <h1>Events & <span>Gallery</span></h1>
+    <div class="full-img" id="fullImgBox">
+      <img src="images/img1.jpg" id="fullImg" />
+      <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallery">
+      <img src="images/glance1.jpg" alt="glance-pic1" onclick="openfullImg(this.src)" />
+      <img src="images/school.JPG" alt="school cover-pic" onclick="openfullImg(this.src)" />
+      <img src="images/glance2.JPG" alt="glance-pic2" onclick="openfullImg(this.src)" />
+      <img src="images/glance3.JPG" alt="glance-pic3" onclick="openfullImg(this.src)" />
+      <img src="images/glance4.JPG" alt="glance-pic4" onclick="openfullImg(this.src)" />
+      <img src="images/glance5.JPG" alt="glance-pic5" onclick="openfullImg(this.src)" />
+      <img src="images/glance6.JPG" alt="glance-pic6" onclick="openfullImg(this.src)" />
+      <img src="images/glance7.JPG" alt="glance-pic7" onclick="openfullImg(this.src)" />
+    </div>
+  </section>
+
+  <!------------- FACILITIES SLIDE-------------->
+
+  <section class="facilities">
+    <h1>A <span>Glance</span> Through Our Facilities</h1>
+    <p>
+      The school provides a wide range of facilities and a supportive learning
+      environment for students, with well-equipped science laboratories and
+      libraries to enhance learning
+    </p>
+    <div class="row-container">
+      <div class="slide-container swiper">
+        <div class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+              <div class="facilities-col">
+                <img src="images/computer lab.JPG" alt="computer lab-pic" />
+                <h3>Computer Laboratory</h3>
+                <p>
+                  Our school features a state-of-the-art computer lab,
+                  equipped with the latest technology for enhanced learning.
+                </p>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="facilities-col">
+                <img src="images/library.JPG" alt="library-pic" />
+                <h3>School Library</h3>
+                <p>
+                  We offer a well-equipped library to enhance our students'
+                  reading abilities.
+                </p>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="facilities-col">
+                <img src="images/playground.JPG" alt="playground-pic" />
+                <h3>School Play Ground</h3>
+                <p>
+                  Our students enjoy a spacious playground for recreational
+                  activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!------------- COURSE -------------->
+  <section class="course">
+    <h1>Our School</h1>
+    <!-- <p>Register your child(ren) into any of our schools</p> -->
+    <div class="row-container">
+      <!-- <div class="course-col">
+          <h3>Crèche</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            quidem consequuntur corrupti assumenda maxime facilis beatae
+            provident temporibus minus labore, qui nam hic porro quas dolorem
+            eius nulla voluptate unde.
+          </p>
+        </div> -->
+      <div class="course-col">
+        <h3>Crèche</h3>
+        <p>
+          <!-- Our experienced and caring team of teachers is committed to creating a home away from home for your child. We offer a well-rounded program that encourages social, emotional, and cognitive development, laying the foundation for a lifetime of learning. -->
+          With a focus on play-based learning, our curriculum sparks
+          creativity, curiosity, and exploration. Through age-appropriate
+          activities, your child will be engaged in storytelling, arts and
+          crafts, music, and interactive games, fostering a love for learning
+          from an early age. You can be rest assured that your child will be
+          in the best hands, receiving individualized attention and care.
+        </p>
+        <a href="" class="hero-btn-course">View Our Brochure</a>
+      </div>
+      <div class="course-col">
+        <h3>Nursery & Primary School</h3>
+        <p>
+          In our nursery, we lay the foundation for early literacy, numeracy,
+          and social skills, fostering a warm and secure environment for your
+          child's growth. As they transition to our primary school, they will
+          build upon their knowledge, expand their horizons, and explore a
+          wide range of subjects, including language arts, mathematics,
+          sciences, arts, and physical education.
+          <!-- Our nursery and primary
+            school provide a holistic and enriching environment where young
+            learners embark on a journey of exploration and excellence. -->
+        </p>
+        <a href="" class="hero-btn-course">View Our Brochure</a>
+      </div>
+      <div class="course-col">
+        <h3>Secondary School</h3>
+        <p>
+          Our experienced and passionate educators are committed to providing
+          a supportive and challenging academic environment that prepares
+          students for success in higher education and beyond. Our
+          comprehensive curriculum goes beyond textbooks, encouraging students
+          to explore a wide range of subjects, including sciences, humanities,
+          languages, arts, and technology.
+        </p>
+        <a href="" class="hero-btn-course">Visit Us To Know More</a>
+      </div>
+    </div>
+  </section>
+
+  <!------------- CAMPUS -------------->
+  <section class="campus">
+    <h1>Our School <span>Building</span></h1>
+    <p>
+      Our massive school building stands tall as a beacon of knowledge,
+      fostering a nurturing environment for students to explore, learn, and
+      grow.
+    </p>
+
+    <div class="row-container">
+      <div class="campus-col">
+        <img src="images/school.JPG" alt="campus-pic1" />
+      </div>
+      <div class="campus-col">
+        <img src="images/campus1.JPG" alt="campus-pic2" />
+      </div>
+      <div class="campus-col">
+        <img src="images/campus2.JPG" alt="campus-pic3" />
+        <!-- <div class="layer">
+            <h3>WASHINGTON</h3>
+          </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!------------- TESTIMONIALS -------------->
+  <section class="testimonials">
+    <h1>What Our Past Students Say</h1>
+    <p>
+      Our students rave about the school, praising its welcoming atmosphere,
+      dedicated teachers, and endless opportunities for growth
+    </p>
+    <div class="row-container">
+      <div class="testimonial-col">
+        <img src="images/user1.jpg" alt="user-pic1" />
+        <div>
+          <p>
+            Kasmoz Private School has had a profound impact on my life. The
+            caring teachers, supportive environment, and enriching experiences
+            have prepared me for success both academically and personally. I'm
+            grateful for the unforgettable memories and the strong foundation
+            it provided for my future.
+          </p>
+          <h3>Adeyemo Mubarak</h3>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+      <div class="testimonial-col">
+        <img src="images/user1.jpg" alt="user-pic2" />
+        <div>
+          <p>
+            As a former student of Kasmoz Private School, I can confidently
+            say it was a transformative experience. The nurturing environment,
+            dedicated teachers, and diverse opportunities helped shape my
+            future with confidence and determination
+          </p>
+          <h3>Adeyemo Sultan</h3>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="main-footer footer">
+    <div class="container">
+      <!--Widgets Section-->
+      <div class="widgets-section">
+        <div class="row clearfix">
+          <!--Column-->
+          <div class="big-column col-lg-6 col-md-12 col-sm-12">
+            <div class="row clearfix">
+              <!--Footer Column-->
+              <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                <div class="footer-widget about-widget">
+                  <div class="logo">
+                    <a href="#">
+                      <img src="images/school-logo.png" alt="school logo-pic" />
+                    </a>
+                  </div>
+                  <div class="rodio" name="rodio-btn" id="rodio1">
+                    <p>
+                      Kasmoz Private School is dedicated to nurturing every
+                      aspect of a child's development in a complex and
+                      challenging world. We harness all available resources to
+                      provide a distinctive experience for every student at
+                      Kasmoz.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!--Footer Column-->
+              <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                <div class="footer-widget links-widget">
+                  <h2>Quick Links</h2>
+                  <ul class="footer-list">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="aims.html">Our Mission</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="curriculum.html">Our Curriculum</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Column-->
+          <div class="big-column col-lg-6 col-md-12 col-sm-12">
+            <div class="row clearfix">
+              <!--Footer Column-->
+              <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                <div class="footer-widget gallery-widget">
+                  <h2>Gallery</h2>
+                  <div class="widget-content">
+                    <div class="http://t.commonsupport.com/morris/images-outer clearfix">
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/footer1.JPG" alt="footer-pic1" /></a>
+                      </figure>
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/footer2.JPG" alt="footer-pic2" /></a>
+                      </figure>
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/school.JPG" alt="footer-pic3" /></a>
+                      </figure>
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/gallery1.JPG" alt="footer-pic4" /></a>
+                      </figure>
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/gallery2.JPG" alt="footer-pic5" /></a>
+                      </figure>
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/gallery3.JPG" alt="footer-pic6" /></a>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Footer Column-->
+              <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                <div class="footer-widget info-widget">
+                  <h2>Contact Info</h2>
+                  <ul class="info-list">
+                    <li>
+                      <i class="fa-solid fa-house"></i>
+                      D18 Oloruntedo Estate Aduloju Town Mfm Bus-Stop Ojoo
+                      Express Road, Ibadan.
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-phone"></i>
+                      <a href="tel:08143036019">08143036019</a>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-phone"></i>
+                      <a href="tel:08134993309">08134993309</a>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-envelope"></i>
+                      <a href="mailto:kasmozschool@gmail.com">kasmozschool@gmail.com</a>
+                    </li>
+                  </ul>
+                  <!-- Social Links -->
+                  <ul class="social-links">
+                    <li class="google">
+                      <a href="mailto:kasmozschool@gmail.com"><span class="fab fa-google-plus-g"></span></a>
+                    </li>
+                    <li class="facebook">
+                      <a href="#"><span class="fab fa-facebook-f"></span></a>
+                    </li>
+                    <li class="instagram">
+                      <a href="#"><span class="fab fa-instagram"></span></a>
+                    </li>
+                    <li class="twitter">
+                      <a href="#"><span class="fab fa-twitter"></span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+
+  <button id="backToTopBtn">
+    <i class="fa-sharp fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- JavaScript -->
+  <!-- JavaScript -->
+
+  <script src="js/card.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/Navigation.js"></script>
+  <script src="js/Typewriter.js"></script>
+  <script src="js/BacgroundScroller.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script src="js/Scrollreaveal.js"></script>
+  <script src="js/shiftDropdown.js"></script>
+  <!-- <script src="js/Hamburger.js"></script> -->
+</body>
+
+</html>

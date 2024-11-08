@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>KPS - Impacting Knowledge, Securing Future</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <!-- ANIMATE CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="css/ionicons.min.css" />
+
+  <!-- SWIPER CSS -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/card.css" />
+  <link rel="stylesheet" href="css/bs.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="images/school-logo.jpg" type="image/x-icon" />
+  <style>
+    .glance h1 {
+      text-align: center;
+    }
+
+    .glance span {
+      color: #f44336;
+    }
+
+    .img-gallery {
+      width: 80%;
+      margin: 100px auto 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-gap: 30px;
+    }
+
+    .img-gallery img {
+      width: 100%;
+      height: 170px;
+      cursor: pointer;
+    }
+
+    .img-gallery img:hover {
+      border-radius: 20px;
+      box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+    }
+
+    .full-img {
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+
+    .full-img img {
+      width: 90%;
+      max-width: 700px;
+    }
+
+    .full-img span {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!------------- NAVBAR -------------->
+
+  <section class="sub-header">
+    <section class="navigation" id="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="index.html">
+            <!-- Logo -->
+            <img src="images/school-logo.png" alt="" />
+          </a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            <!-- <li>
+                <a href="#!">HOME</a>
+              </li> -->
+            <li>
+              <a href="#!">ABOUT US</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="about.html">About KPS</a>
+                </li>
+                <li>
+                  <a href="director.html">Director's Message</a>
+                </li>
+                <li>
+                  <a href="aims.html">Aims & Objectives</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#!">ACADEMICS</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="curriculum.html">Curriculum</a>
+                </li>
+                <li>
+                  <a href="junior.html">J.S.S Subjects</a>
+                </li>
+                <li>
+                  <a href="secondary.html">S.S.S Subjects</a>
+                </li>
+                <li>
+                  <a href="gallery.html">Events & Gallery</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="admission.html">ADMISSION</a>
+              <!-- <ul class="nav-dropdown">
+                  <li>
+                    <a href="#!">Tuition & Scholarships</a>
+                  </li>
+                  <li>
+                    <a href="#!">Admission Process</a>
+                  </li>
+                </ul> -->
+            </li>
+
+            <li>
+              <a href="staff.html">OUR STAFFS</a>
+            </li>
+            <li>
+              <a href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <h1 class="animate__animated animate__fadeInDown">Our <span>Photo Gallery</span></h1>
+  </section>
+
+  <section class="glance">
+    <div class="full-img" id="fullImgBox">
+      <img src="images/img1.jpg" id="fullImg" />
+      <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallery">
+      <img src="images/glance1.jpg" alt="gallery-pic1" onclick="openfullImg(this.src)" />
+      <img src="images/school.JPG" alt="gallery-pic2" onclick="openfullImg(this.src)" />
+      <img src="images/glance2.JPG" alt="gallery-pic3" onclick="openfullImg(this.src)" />
+      <img src="images/glance3.JPG" alt="gallery-pic4" onclick="openfullImg(this.src)" />
+      <img src="images/glance4.JPG" alt="gallery-pic5" onclick="openfullImg(this.src)" />
+      <img src="images/glance5.JPG" alt="gallery-pic6" onclick="openfullImg(this.src)" />
+      <img src="images/glance6.JPG" alt="gallery-pic7" onclick="openfullImg(this.src)" />
+      <img src="images/glance7.JPG" alt="gallery-pic8" onclick="openfullImg(this.src)" />
+      <img src="images/gallery1.JPG" alt="gallery-pic9" onclick="openfullImg(this.src)" />
+      <img src="images/gallery2.JPG" alt="gallery-pic10" onclick="openfullImg(this.src)" />
+      <img src="images/gallery3.JPG" alt="gallery-pic11" onclick="openfullImg(this.src)" />
+      <img src="images/gallery4.JPG" alt="gallery-pic12" onclick="openfullImg(this.src)" />
+      <img src="images/gallery5.JPG" alt="gallery-pic13" onclick="openfullImg(this.src)" />
+      <img src="images/gallery6.JPG" alt="gallery-pic14" onclick="openfullImg(this.src)" />
+      <img src="images/gallery7.JPG" alt="gallery-pic15" onclick="openfullImg(this.src)" />
+      <img src="images/gallery8.JPG" alt="gallery-pic16" onclick="openfullImg(this.src)" />
+      <img src="images/gallery9.JPG" alt="gallery-pic17" onclick="openfullImg(this.src)" />
+      <img src="images/gallery10.JPG" alt="gallery-pic18" onclick="openfullImg(this.src)" />
+      <img src="images/gallery11.JPG" alt="gallery-pic19" onclick="openfullImg(this.src)" />
+      <img src="images/gallery12.JPG" alt="gallery-pic20" onclick="openfullImg(this.src)" />
+      <img src="images/gallery13.JPG" alt="gallery-pic21" onclick="openfullImg(this.src)" />
+      <img src="images/gallery14.JPG" alt="gallery-pic22" onclick="openfullImg(this.src)" />
+      <img src="images/gallery15.JPG" alt="gallery-pic23" onclick="openfullImg(this.src)" />
+      <img src="images/gallery16.JPG" alt="gallery-pic24" onclick="openfullImg(this.src)" />
+      <img src="images/gallery17.JPG" alt="gallery-pic25" onclick="openfullImg(this.src)" />
+      <img src="images/gallery18.JPG" alt="gallery-pic26" onclick="openfullImg(this.src)" />
+      <img src="images/gallery19.JPG" alt="gallery-pic27" onclick="openfullImg(this.src)" />
+      <img src="images/gallery20.JPG" alt="gallery-pic27" onclick="openfullImg(this.src)" />
+      <img src="images/gallery21.JPG" alt="gallery-pic28" onclick="openfullImg(this.src)" />
+      <img src="images/gallery22.JPG" alt="gallery-pic29" onclick="openfullImg(this.src)" />
+      <img src="images/gallery23.JPG" alt="gallery-pic30" onclick="openfullImg(this.src)" />
+      <img src="images/gallery24.JPG" alt="gallery-pic31" onclick="openfullImg(this.src)" />
+      <img src="images/gallery25.JPG" alt="gallery-pic32" onclick="openfullImg(this.src)" />
+      <img src="images/gallery26.JPG" alt="gallery-pic33" onclick="openfullImg(this.src)" />
+      <img src="images/gallery27.JPG" alt="gallery-pic34" onclick="openfullImg(this.src)" />
+      <img src="images/gallery28.JPG" alt="gallery-pic35" onclick="openfullImg(this.src)" />
+      <img src="images/gallery29.JPG" alt="gallery-pic36" onclick="openfullImg(this.src)" />
+      <img src="images/gallery30.JPG" alt="gallery-pic37" onclick="openfullImg(this.src)" />
+    </div>
+  </section>
+
+  <!------------- FOOTER -------------->
+
+  <footer class="main-footer">
+    <div class="container">
+      <!--Widgets Section-->
+      <div class="widgets-section">
+        <div class="row clearfix">
+          <!--Column-->
+          <div class="big-column col-lg-6 col-md-12 col-sm-12">
+            <div class="row clearfix">
+              <!--Footer Column-->
+              <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                <div class="footer-widget about-widget">
+                  <div class="logo">
+                    <a href="#">
+                      <img src="images/school-logo.png" alt="school logo-pic" />
+                    </a>
+                  </div>
+                  <div class="text">
+                    <p>
+                      Kasmoz Private School is dedicated to nurturing every
+                      aspect of a child's development in a complex and
+                      challenging world. We harness all available resources to
+                      provide a distinctive experience for every student at
+                      Kasmoz.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!--Footer Column-->
+              <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                <div class="footer-widget links-widget">
+                  <h2>Quick Links</h2>
+                  <ul class="footer-list">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="aims.html">Our Mission</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="curriculum.html">Our Curriculum</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Column-->
+          <div class="big-column col-lg-6 col-md-12 col-sm-12">
+            <div class="row clearfix">
+              <!--Footer Column-->
+              <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                <div class="footer-widget gallery-widget">
+                  <h2>Gallery</h2>
+                  <div class="widget-content">
+                    <div class="http://t.commonsupport.com/morris/images-outer clearfix">
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/footer1.JPG" alt="footer-pic1" /></a>
+                      </figure>
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/footer2.JPG" alt="footer-pic2" /></a>
+                      </figure>
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/school.JPG" alt="footer-pic3" /></a>
+                      </figure>
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/gallery1.JPG" alt="footer-pic4" /></a>
+                      </figure>
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/gallery2.JPG" alt="footer-pic5" /></a>
+                      </figure>
+                      <!--Image Box-->
+                      <figure class="image-box">
+                        <a href="#" class="lightbox-image" data-fancybox="footer-gallery" title="Image Title Here"
+                          data-fancybox-group="footer-gallery"><img src="images/gallery3.JPG" alt="footer-pic6" /></a>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Footer Column-->
+              <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                <div class="footer-widget info-widget">
+                  <h2>Contact Info</h2>
+                  <ul class="info-list">
+                    <li>
+                      <i class="fa-solid fa-house"></i>
+                      D18 Oloruntedo Estate Aduloju Town Mfm Bus-Stop Ojoo
+                      Express Road, Ibadan.
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-phone"></i>
+                      <a href="tel:08143036019">08143036019</a>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-phone"></i>
+                      <a href="tel:08134993309">08134993309</a>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-envelope"></i>
+                      <a href="mailto:kasmozschool@gmail.com">kasmozschool@gmail.com</a>
+                    </li>
+                  </ul>
+                  <!-- Social Links -->
+                  <ul class="social-links">
+                    <li class="google">
+                      <a href="mailto:kasmozschool@gmail.com"><span class="fab fa-google-plus-g"></span></a>
+                    </li>
+                    <li class="facebook">
+                      <a href="#"><span class="fab fa-facebook-f"></span></a>
+                    </li>
+                    <li class="instagram">
+                      <a href="#"><span class="fab fa-instagram"></span></a>
+                    </li>
+                    <li class="twitter">
+                      <a href="#"><span class="fab fa-twitter"></span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+
+  <button id="backToTopBtn">
+    <i class="fa-sharp fa-solid fa-arrow-up"></i>
+  </button>
+  <script src="js/script.js"></script>
+  <script src="js/Navigation.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+  <script src="js/Scrollreaveal.js"></script>
+  <script src="js/shiftDropdown.js"></script>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
