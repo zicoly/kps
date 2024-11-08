@@ -1,18 +1,6 @@
 (function ($) {
   // Begin jQuery
   $(function () {
-    // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    $("nav ul li a:not(:only-child)").click(function (e) {
-      $(this).siblings(".nav-dropdown").toggle();
-      // Close one dropdown when selecting another
-      $(".nav-dropdown").not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    // Clicking away from dropdown will remove the dropdown class
-    $("html").click(function () {
-      $(".nav-dropdown").hide();
-    });
     // Toggle open and close nav styles on click
     $("#nav-toggle").click(function () {
       $("nav ul").slideToggle();
@@ -38,18 +26,37 @@ function closeFullImg() {
 
 // BACK TO TOP MENU
 
-const backToTopBtn = document.getElementById("backToTopBtn");
+// const backToTopBtn = document.getElementById("backToTopBtn");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 0) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-});
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > 0) {
+//     backToTopBtn.style.display = "block";
+//   } else {
+//     backToTopBtn.style.display = "none";
+//   }
+// });
 
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+// backToTopBtn.addEventListener("click", () => {
+//   window.scrollTo({ top: 0, behavior: "smooth" });
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const backToTopBtn = document.getElementById('backToTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) { 
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 });
 
 // POPUP COVER
